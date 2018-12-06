@@ -27,7 +27,7 @@ Create task definition
 Create service  
 SUCCESS: State states/1544100736 save on disk  
 3) Get ALB DNS name and check that cluster ready. You need wait sometime for cluster setup. You will see "Ready to work"     
-python3 check_infrastructure.py upw-test-985554023.us-east-1.elb.amazonaws.com`  
+`python3 check_infrastructure.py upw-test-985554023.us-east-1.elb.amazonaws.com`  
 http://upw-test-985554023.us-east-1.elb.amazonaws.com/phpmyadmin response 502  
 Lets wait 10 seconds  
 `...`  
@@ -45,5 +45,5 @@ Romove state file
 5) Remove user. Provide user to delete (you can find it on step 1)  
 `python3 delete_user.py --region us-east-1 --access-key AAAAAA --secret-key ZZZZZZZ --delete-user fargate-user-1544100575`  
  Try delete policy with same name as user: fargate-user-1544100575  
- Romove state file 
+ Remove state file 
  
