@@ -23,6 +23,13 @@ def create_user(region, access_key, secret_key, username, policy_name):
                           region_name=region,
                           aws_access_key_id=access_key,
                           aws_secret_access_key=secret_key)
+    try:
+        client.create_service_linked_role(
+            AWSServiceName='ecs.amazonaws.com',
+            Description='service linked role for ECS'
+        )
+    except Exception as e:
+        pass
     client.create_user(UserName=username)
     create_policy = client.create_policy(
         PolicyName=policy_name,
