@@ -5,9 +5,16 @@
 `check_infrastructure.py` - script check infrastructure. arguments to input: dnsname (ALB DNS public address)  
 `shared_functions.py` - contains shared functions between all scripts  
 
-### Step by step guide  
+## Step by step guide  
+### Initial setup for newly cloned repositories
+-2) Create python virtual environment
+`python3 -m venv .env`
+-1) Activate python virtual environment (Do this step every time you need to work on the project)
+`source ./.env/bin/activate`
 0) Install requirements  
-`pip3 install -r requirements.txt`  
+`pip3 install -r requirements.txt`
+  
+### Use the scripts to provision a new fargate instance
 1) Create user  
 `python3 create_user.py --region us-east-1 --access-key AAAA --secret-key ZZZZ`  
 New user created!  
