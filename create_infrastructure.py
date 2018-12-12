@@ -415,8 +415,8 @@ states_dir = "states/"
 cluster_name = "upw-test"
 service_name = cluster_name + "-service"
 task_definition_name = cluster_name + "-task-definition"
-container_name = "mysql-phpmyadmin"
-container_image = "wnameless/mysql-phpmyadmin:latest"
+container_name = "ienterprise"
+container_image = "ehwest/ienterprise:latest"
 region, access_key, secret_key, _, _ = parse_arguments()
 
 
